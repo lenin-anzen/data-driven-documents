@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Reusable Donut Chart in D3 v4</title>
+
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/donut-2.css">
+    <script src="assets/js/donut-2.js"></script>
+</head>
+<body>
+    <p><a href="https://bl.ocks.org/mbhall88/b2504f8f3e384de4ff2b9dfa60f325e2">A static, reusable donut chart for D3.js v4.</a></p>
+    <div id="chart"></div>
+    <script>
+    (function(d3) {
+        var donut = donutChart()
+            .width(960)
+            .height(500)
+            .cornerRadius(20) // sets how rounded the corners are on each slice
+            .padAngle(0.060) // effectively dictates the gap between slices
+            .variable('Probability')
+            .category('Species');
+
+        d3.tsv('assets/tsv/donut-2.tsv', function(error, data) {
+            if (error) throw error;
+            d3.select('#chart')
+                .datum(data) // bind data to the div
+                .call(donut); // draw chart in div
+        });
+    })(window.d3);
+    </script>
+</body>
+</html>

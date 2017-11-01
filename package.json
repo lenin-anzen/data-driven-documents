@@ -1,0 +1,27 @@
+{
+  "name": "data-driven-documents",
+  "version": "1.0.0",
+  "description": "Examples of D3",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lenin-anzen/data-driven-documents.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lenin-anzen/data-driven-documents/issues"
+  },
+  "homepage": "https://github.com/lenin-anzen/data-driven-documents#readme",
+  "devDependencies": {
+    "eslint-config-airbnb-base": "^12.1.0",
+    "eslint-plugin-import": "^2.8.0"
+  }
+}
